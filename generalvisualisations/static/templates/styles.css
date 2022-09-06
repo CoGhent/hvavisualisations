@@ -1,14 +1,14 @@
 h1 {
-    color: rgb(104, 104, 193);
-    font-family: Verdana;
-    font-size: 300%;
+    color: #39FF14;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 3cm;
     text-align: center;
 }
 
 h2 {
-    color: rgb(243, 149, 26);
-    font-family: Verdana;
-    font-size: 200%;
+    color: rgb(12, 12, 12);
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 400%;
     text-align: left;
     margin-left: 1cm;
 }
@@ -97,4 +97,60 @@ option {
     height: 700px;
     width: 80%;
     margin-left: 10%;
+}
+
+.fullheader {
+    height: 7cm;
+    width: 100%;
+    text-align: center;
+}
+
+.header {
+    width: 70%;
+    float: left;
+    height: 7cm
+}
+
+.logoparent {
+    width: 15%;
+    float: left;
+    height: 5cm
+}
+
+.logochild1 {
+    width: 50%;
+    position: relative;
+    animation-name: logoflip;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.logochild2 {
+    width: 50%;
+    position: relative;
+    animation-name: logoflip2;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes logoflip {
+    0%   {left:0px; top:0px;}
+    25%  {left:50%; top:0px;}
+    50%  {left:50%; top:50%;}
+    75%  {left:0px; top:50%;}
+    100% {left:0px; top:0px;}
+  }
+
+@keyframes logoflip2 {
+0%   {left:50%; top:0px;}
+25%  {left:0px; top:0px;}
+50%  {left:0px; top:50%;}
+75%  {left:50%; top:50%;}
+100% {left:50%; top:0px;}
 }

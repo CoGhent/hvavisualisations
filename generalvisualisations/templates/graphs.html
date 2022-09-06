@@ -3,9 +3,24 @@
     <head>
         {% load static %}
         <link rel="stylesheet" href="{% static 'templates/styles.css' %}">
+        <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500&display=swap" rel="stylesheet">
     </head>
     <body>
-        <h1>Huis van Alijn: Statistics</h1>
+        <div class="fullheader">
+            <div class="logoparent">
+                <div class="logochild1">
+                    {% load static %} <img src="{% static 'images/logohva.jpg' %}", style= 'height:95%; width: 95%; object-fit: contain'>
+                </div>
+            </div>
+            <div class="header">
+                <h1>Huis van Alijn: Statistics</h1>
+            </div>
+            <div class="logoparent">
+                <div class="logochild2">
+                    {% load static %} <img src="{% static 'images/logohva.jpg' %}", style= 'height:95%; width: 95%; object-fit: contain'>
+                </div>
+            </div>
+        </div>
         <div class = 'heading'>
             <h2>Algemeen</h2>
         </div>
