@@ -1,0 +1,100 @@
+h1 {
+    color: rgb(104, 104, 193);
+    font-family: Verdana;
+    font-size: 300%;
+    text-align: center;
+}
+
+h2 {
+    color: rgb(243, 149, 26);
+    font-family: Verdana;
+    font-size: 200%;
+    text-align: left;
+    margin-left: 1cm;
+}
+
+.heading {
+    clear:both
+}
+
+.graphbox {
+    clear:both;
+    width: 100%;
+    height: 650px;
+}
+
+.mapbox {
+    clear:both;
+    width: 100%;
+    height: 650px;
+}
+
+.map {
+    clear:both;
+    width: 100%;
+    height: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.graphboxsmall {
+    clear:both;
+    width: 100%;
+    height: 450px;
+}
+
+.graph {
+    height: 600px;
+    width: 50%;
+    float: left;
+}
+
+.img {
+    height: 100px;
+    width: 10%;
+    float: left;
+}
+
+.smallgraph {
+    height: 400px;
+    width: 25%;
+    float: left;
+}
+
+button {
+    background-color: #151515;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: Verdana;
+    margin-left: 3cm;
+    border-radius: 5%;
+}
+
+select {
+    margin-left: 2cm;
+    font-family: Verdana;
+    font-size: 150%;
+    font-variant-caps: all-small-caps;
+    background-color: #151515 !important;
+    color: aliceblue;
+    text-align: center;
+    border-radius: 5%;
+}
+
+option {
+    font-family: Verdana;
+    font-variant-caps: all-petite-caps;
+}
+
+#map {
+    height: 700px;
+    width: 80%;
+    margin-left: 10%;
+}
