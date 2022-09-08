@@ -2,22 +2,21 @@
 <html lang="en">
     <head>
         {% load static %}
-        <link rel="stylesheet" href="{% static 'templates/styles.css' %}">
         <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'templates/stylesgraph.css' %}">
     </head>
-    <body>
+    <body style="margin:0;padding:0">
         <div class="fullheader">
-            <div class="logoparent">
-                <div class="logochild1">
+            <div class="logobig">
+                <div class="logosmall">
                     {% load static %} <img src="{% static 'images/logohva.jpg' %}", style= 'height:95%; width: 95%; object-fit: contain'>
                 </div>
             </div>
             <div class="header">
                 <h1>Huis van Alijn: Statistics</h1>
             </div>
-            <div class="logoparent">
-                <div class="logochild2">
-                    {% load static %} <img src="{% static 'images/logohva.jpg' %}", style= 'height:95%; width: 95%; object-fit: contain'>
+            <div class="logobig">
+                <div class="logosmall">
                 </div>
             </div>
         </div>
@@ -26,20 +25,20 @@
         </div>
         <div class = 'graphbox'>
             <div class="graph">
-                <img src="data:imageRecords/png;base64,{{ graphRecords|safe }}">
+                <img src="data:imageRecords/png;base64,{{ graphRecords|safe }}", style= 'height:95%; width: 95%; object-fit: contain'>
             </div>
             <div class="graph">
-                <img src="data:image/png;base64,{{ graphRecordsHvA|safe }}">
+                <img src="data:image/png;base64,{{ graphRecordsHvA|safe }}", style= 'height:95%; width: 95%; object-fit: contain'>
             </div>
         <div class = 'heading'>
             <h2>Datering</h2>
         </div>
         <div class = 'graphbox'>
             <div class="graph">
-                <img src="data:imageDates/png;base64,{{ graphDatesPresent|safe }}">
+                <img src="data:imageDates/png;base64,{{ graphDatesPresent|safe }}", style= 'height:95%; width: 95%; object-fit: contain'>
             </div>
             <div class="graph">
-                <img src="data:imageDates/png;base64,{{ graphDates|safe }}">
+                <img src="data:imageDates/png;base64,{{ graphDates|safe }}", style= 'height:95%; width: 95%; object-fit: contain'>
             </div>
         </div>
         <div class = 'heading'>

@@ -1,9 +1,11 @@
+import matplotlib
+matplotlib.use('Agg')
+from matplotlib import pyplot as plt
 from lodstorage.sparql import SPARQL
 from lodstorage.csv import CSV
 import math
 import ssl
 import pandas as pd
-from matplotlib import pyplot as plt
 import datetime
 from numpy import cumsum
 from io import BytesIO
@@ -114,7 +116,7 @@ def recordsHvA():
 
     bufferRecordsHvA = BytesIO()
     plt.savefig(bufferRecordsHvA, format='png')
-    plt.clf()
+    plt.close()
     bufferRecordsHvA.seek(0)
     imageRecordsHvA_png = bufferRecordsHvA.getvalue()
     bufferRecordsHvA.close()

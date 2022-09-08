@@ -132,10 +132,12 @@ def map():
     df_straten[1].fillna(0, inplace=True)
     df_straten = df_straten[df_straten['Latitude'] != 0]
     df_straten = df_straten[df_straten[1] != 0]
+    df_straten.rename(columns={1: 'aantal'}, inplace=True, errors='raise')
+    df_straten['size'] = 3
 
-    fig = px.scatter_mapbox(df_straten, lat="Longitude", lon="Latitude", hover_data=["straat", 1],
-                            color_discrete_sequence=["yellow"], zoom=11, height=500)
+    fig = px.scatter_mapbox(data_frame=df_straten, lat=df_straten["Longitude"], lon=df_straten["Latitude"], hover_data=["straat", 'aantal'], color_discrete_sequence=["yellow"], size='size', size_max=10, zoom=12, height=500)
     fig.update_layout(mapbox_style="open-street-map")
     fig.update_layout(margin={"r": 0, "t": 0, "l": 0, "b": 0})
+    fig.data[0].update(hovertemplate= 'straat=%{customdata[0]}<br>aantal=%{customdata[1]}<extra></extra>')
     graphMap = fig.to_html(full_html=False, default_height=650, default_width=1300)
     return(graphMap)

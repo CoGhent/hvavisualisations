@@ -1,9 +1,11 @@
+import matplotlib
+matplotlib.use('Agg')
+from matplotlib import pyplot as plt
 from lodstorage.sparql import SPARQL
 from lodstorage.csv import CSV
 import math
 import ssl
 import pandas as pd
-from matplotlib import pyplot as plt
 from numpy import cumsum
 from io import BytesIO
 import base64
@@ -108,9 +110,11 @@ def dates():
     aantal_dateringen = sum(aantallen)
     datering_afwezig = aantal_hva - aantal_dateringen
     datering_aanwezig = [aantal_dateringen, datering_afwezig]
-    dateringen = ['datering aanwezig', 'datering afwezig']
+    dateringen = ['Datering aanwezig', 'Datering afwezig']
 
-    plt.pie(datering_aanwezig, labels=dateringen)
+    plt.style.use("seaborn-pastel")
+    exploded = [0, 0.1]
+    plt.pie(datering_aanwezig, labels=dateringen, explode=exploded, startangle=230)
     plt.tight_layout()
     
     bufferDatespresent = BytesIO()
@@ -121,7 +125,7 @@ def dates():
 
     graphDatesPresent = base64.b64encode(imageDatespresent_png)
     graphDatesPresent = graphDatesPresent.decode('utf-8')
-    plt.clf()
+    plt.close()
 
     plt.style.use("seaborn-pastel")
     plt.bar(periodes, aantallen, width=0.4)
@@ -136,6 +140,6 @@ def dates():
 
     graphDates = base64.b64encode(imageDates_png)
     graphDates = graphDates.decode('utf-8')
-    plt.clf()
+    plt.close()
 
     return(graphDatesPresent, graphDates)

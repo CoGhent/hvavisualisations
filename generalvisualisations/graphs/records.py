@@ -1,9 +1,11 @@
+import matplotlib
+matplotlib.use('Agg')
+from matplotlib import pyplot as plt
 from lodstorage.sparql import SPARQL
 from lodstorage.csv import CSV
 import math
 import ssl
 import pandas as pd
-from matplotlib import pyplot as plt
 import datetime
 from numpy import cumsum
 from io import BytesIO
@@ -463,7 +465,7 @@ def records():
 
     bufferRecords = BytesIO()
     plt.savefig(bufferRecords, format='png')
-    plt.clf()
+    plt.close()
     bufferRecords.seek(0)
     imageRecords_png = bufferRecords.getvalue()
     bufferRecords.close()
