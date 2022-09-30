@@ -112,7 +112,7 @@ def map():
             df_sparql = df_sparql.append(df_result, ignore_index=True)
 
     # databank straten en coordinaten
-    df_straten = pd.read_excel(r"C:\Users\Verkesfl\OneDrive - Groep Gent\Documenten\Documenten\COGHENT\code\hvavisualisations\generalvisualisations\graphs\stratencoordinaten.xlsx")
+    df_straten = pd.read_excel("stratencoordinaten.xlsx")
 
     # tel aantal keer een straat voorkomt in sparql resultaat
     aantal = df_sparql[1].value_counts()
