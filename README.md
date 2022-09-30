@@ -7,7 +7,7 @@ It contains following [visualisations](https://github.com/CoGhent/hvavisualisati
 - Number of records with creation data + per decennia
 - Number of records per street in Ghent on a map (zoom and hover to check data)
 
-This code is built using Django framework. To run this code, install django in a virtual environment. Download the code and run 'python manage.py runserver' in the command line.
+This code is built using Django framework. To run this code, download the code, install django in a virtual environment (pipenv install django) and run 'python manage.py runserver' in the command line.
 
 *for example*
 
